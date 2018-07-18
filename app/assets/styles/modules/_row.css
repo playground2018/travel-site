@@ -15,6 +15,18 @@
     &__b-margin-until-medium {
         margin-bottom: 1rem;
     }
+    &--t-padding {
+        padding-top: 0rem;
+        @mixin atSmall {
+            padding-top: 5rem;
+        }
+    }
+    &--gutters-small {
+        margin-right: -4rem;
+    }
+    &--gutters-small>div {
+        padding-right: 3rem;
+    }
     @mixin atMedium {
         &__medium-4 {
             float: left;
@@ -36,6 +48,15 @@
         }
         &__b-margin-until-medium {
             margin-bottom: 0;
+        }
+    }
+    &--equal-height-at-medium {
+        @mixin atMedium {
+            display: flex;
+        }
+        &>div {
+            float: none;
+            display: flex;
         }
     }
 }
